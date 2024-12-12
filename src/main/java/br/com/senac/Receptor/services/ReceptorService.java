@@ -19,6 +19,7 @@ public class ReceptorService {
     @RabbitListener(queues = "permissoes")
     private void reading(Receptor receptor){
         receptorRepository.save(receptor);
+        System.out.println(receptor);
     }
 
 }
