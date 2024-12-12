@@ -27,7 +27,7 @@ services:
       - MYSQL_DATABASE=ms_receptor
       - MYSQL_ROOT_PASSWORD=
     ports:
-      - '3306:3306'
+      - '3360:3360'
     volumes:
       - mysql-volume:/var/lib/mysql
   rabbitmq:
