@@ -18,10 +18,10 @@ FROM openjdk:17
 WORKDIR /app
 
 # Copie o arquivo .jar gerado na etapa de build para a imagem final
-COPY --from=build /app/target/*.jar ThallesNascimentoEmissor.jar
+COPY --from=build /app/target/*.jar Receptor.jar
 
 # Exponha a porta que a aplicação vai usar
-EXPOSE 5454
+EXPOSE 11112
 
 # Comando para rodar a aplicação
-ENTRYPOINT ["java", "-jar", "ThallesNascimentoEmissor.jar"]
+ENTRYPOINT ["java", "-jar", "Receptor.jar"]
